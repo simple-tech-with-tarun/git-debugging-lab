@@ -11,3 +11,7 @@ def get_application_details():
         "application": get_application_name(),
         "environment": get_environment(),
     }
+
+
+def get_application_status():
+    return "running"
