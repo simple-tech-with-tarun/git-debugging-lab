@@ -1,4 +1,4 @@
-DEFAULT_ENVIRONMENT = "testing"
+DEFAULT_ENVIRONMENT = "production"
 
 SUPPORTED_ENVIRONMENTS = [
     "development",
