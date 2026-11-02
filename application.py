@@ -3,7 +3,8 @@ def calculate_total(price, quantity):
 
 
 def apply_discount(total, discount):
-    return total - (total * discount)
+    discount_amount = total * discount
+    return total - discount_amount
 
 
 def format_invoice(total):
