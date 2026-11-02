@@ -1,0 +1,16 @@
+def calculate_total(price, quantity):
+    return price * quantity
+
+
+def apply_discount(total, discount):
+    return total - (total * discount)
+
+
+def format_invoice(total):
+    return f"Invoice total: {total:.2f}"
+
+
+def process_order(price, quantity, discount):
+    total = calculate_total(price, quantity)
+    discounted_total = apply_discount(total, discount)
+    return format_invoice(discounted_total)
