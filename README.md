@@ -9,6 +9,9 @@ This repository contains deliberately constructed Git histories and practical ex
 - Investigate Git commit history and branching strategies.
 - Identify changes responsible for regressions.
 - Understand merge conflicts and branch divergence.
+- Attribute code changes to authors and historical commits.
+- Trace moved, copied, and renamed files through Git history.
+- Search historical changes using exact strings and regular expressions.
 - Recover unreachable Git objects.
 - Inspect Git trees, blobs, and commits.
 - Understand dangling objects and repository forensics.
@@ -25,7 +28,6 @@ Topics:
 - Branch divergence
 - Merge commits
 - Hotfix workflows
-- Code attribution
 
 ### 2. Advanced History Investigation
 
@@ -44,6 +46,22 @@ Topics:
 Investigate repository states and application changes through Git history and object inspection.
 
 [View exercise branch](https://github.com/simple-tech-with-tarun/git-debugging-lab/tree/exercise/repository-forensics)
+
+### 4. Code Attribution and Historical Investigation
+
+Investigate how code evolved, identify the commits responsible for specific lines, trace copied and moved code, and analyze repository contributions.
+
+Topics:
+- Line-level attribution using `git blame`
+- Moved and copied code detection (`-M`, `-C`)
+- Whitespace-insensitive attribution (`-w`)
+- Historical string and regular-expression searches (`-S`, `-G`)
+- File rename tracking (`git log --follow`)
+- Historical file retrieval (`git show`)
+- Contribution analysis (`git shortlog`, `git log --author`)
+- Author and committer investigation
+
+[View exercise documentation](code-attribution-investigation/README.md)
 
 ## Evidence and Recovery Exercises
 
@@ -77,16 +95,23 @@ The evidence directory includes:
 ```text
 git-debugging-lab/
 ├── README.md
-├── evidence/
-│   └── dangling-tree-recovery/
-│       ├── README.md
-│       ├── conflict-snapshot.zip
-│       └── conflict-snapshot/
-│           ├── README.md
-│           ├── app.py
-│           ├── config.py
-│           └── metadata.py
-└── exercises/
+├── app.py
+├── application.py
+├── config.py
+├── deployment.py
+├── metadata.py
+├── pricing_utils.py
+├── code-attribution-investigation/
+│   └── README.md
+└── evidence/
+    └── dangling-tree-recovery/
+        ├── README.md
+        ├── conflict-snapshot.zip
+        └── conflict-snapshot/
+            ├── README.md
+            ├── app.py
+            ├── config.py
+            └── metadata.py
 ```
 
 Additional investigation scenarios are maintained in dedicated Git branches.
