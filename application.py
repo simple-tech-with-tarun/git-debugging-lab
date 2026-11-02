@@ -1,5 +1,5 @@
 def apply_discount(total, discount):
-    discount_amount = total * discount
+    discount_amount = discount * total
     return total - discount_amount
 
 
