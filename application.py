@@ -8,7 +8,7 @@ def apply_discount(total, discount):
 
 
 def format_invoice(total):
-    return f"Invoice total: {total:.2f}"
+    return f"Invoice total: ${total:.2f}"
 
 
 def process_order(price, quantity, discount):
