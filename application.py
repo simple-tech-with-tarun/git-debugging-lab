@@ -8,7 +8,7 @@ def format_invoice(total):
 
 
 def calculate_total(price, quantity):
-    return price * quantity
+    return  price * quantity
 
 
 def process_order(price, quantity, discount):
