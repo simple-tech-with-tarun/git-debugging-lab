@@ -1,5 +1,12 @@
+def calculate_discount_amount(total, discount):
+    return discount * total
+
+
 def apply_discount(total, discount):
-    discount_amount = discount * total
+    if not 0 <= discount <= 1:
+        raise ValueError("Discount must be between 0 and 1")
+
+    discount_amount = calculate_discount_amount(total, discount)
     return total - discount_amount
 
 
@@ -8,7 +15,7 @@ def format_invoice(total):
 
 
 def calculate_total(price, quantity):
-    return  price * quantity
+    return price * quantity
 
 
 def process_order(price, quantity, discount):
