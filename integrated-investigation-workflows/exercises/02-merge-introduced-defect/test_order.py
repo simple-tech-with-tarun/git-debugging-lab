@@ -20,6 +20,14 @@ def test_order_total_with_discount():
     assert result == expected, f"Expected {expected}, got {result}"
 
 
+def test_tax_is_calculated_after_discount():
+    result = calculate_order_total(100, 2, 0.10, 0.10)
+    expected = 198.0
+
+    assert result == expected, f"Expected {expected}, got {result}"
+
+
 if __name__ == "__main__":
     test_order_total_with_discount()
     print("PASS: order total test is correct")
+    test_tax_is_calculated_after_discount()
