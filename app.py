@@ -15,3 +15,7 @@ def get_application_details():
 
 def get_application_status():
     return "running"
+
+
+def get_build_identifier():
+    return "forensic-recovery-001"
