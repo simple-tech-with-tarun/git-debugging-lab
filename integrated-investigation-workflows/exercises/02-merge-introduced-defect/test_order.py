@@ -29,5 +29,6 @@ def test_tax_is_calculated_after_discount():
 
 if __name__ == "__main__":
     test_order_total_with_discount()
-    print("PASS: order total test is correct")
     test_tax_is_calculated_after_discount()
+    print("PASS: all order tests are correct")
+    
