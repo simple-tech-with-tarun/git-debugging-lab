@@ -1,8 +1,12 @@
+def calculate_discount_amount(total, discount):
+    return discount * total
+
+
 def apply_discount(total, discount):
     if not 0 <= discount <= 1:
         raise ValueError("Discount must be between 0 and 1")
 
-    discount_amount = discount * total
+    discount_amount = calculate_discount_amount(total, discount)
     return total - discount_amount
 
 
