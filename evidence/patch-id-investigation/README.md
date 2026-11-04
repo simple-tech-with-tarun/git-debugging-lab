@@ -136,6 +136,17 @@ Patch IDs represent patch content rather than complete commit history. They do n
 
 Patch ID comparison is a practical investigation technique, not a substitute for reviewing the actual commits and repository history.
 
+### Rebase and Cherry-Pick Effects on Commit Identity
+
+Rebase and cherry-pick can reproduce an existing change in a different commit.
+
+- A cherry-pick creates a new commit with a different commit hash because the new commit has different parent and committer information.
+- A rebase recreates commits on a new base, changing their parent relationships and normally producing new commit hashes.
+- Even when the resulting changes are equivalent, patch IDs can remain the same.
+- Patch ID comparison helps identify equivalent changes across rewritten histories, but it does not prove that the resulting repository states are identical.
+
+Commit identity and patch equivalence must therefore be investigated separately.
+
 ## Conclusion
 
 The investigation successfully demonstrated how Git identifies equivalent patches across independently created commits.
