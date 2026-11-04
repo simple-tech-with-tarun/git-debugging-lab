@@ -124,6 +124,7 @@ Topics:
 - Comparing patches across independent commits
 - Identifying equivalent changes using `git cherry`
 - Understanding patch equivalence and its limitations
+- Rebase and cherry-pick effects on commit identity
 
 **Evidence location:** `evidence/patch-id-investigation/`
 
