@@ -10,12 +10,12 @@ SPEC = importlib.util.spec_from_file_location(
 application = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(application)
 
-calculate_shipping_cost = application.calculate_shipping_cost
+estimate_shipping_cost = application.estimate_shipping_cost
 process_shipment = application.process_shipment
 
 
 def test_shipping_cost():
-    result = calculate_shipping_cost(10, 20)
+    result = estimate_shipping_cost(10, 20)
     expected = 30.0
 
     assert result == expected, f"Expected {expected}, got {result}"
@@ -31,4 +31,5 @@ def test_process_shipment():
 if __name__ == "__main__":
     test_shipping_cost()
     test_process_shipment()
-    print("PASS: historical reconstruction baseline tests are correct")
+    print("PASS: historical reconstruction tests are correct")
+    
