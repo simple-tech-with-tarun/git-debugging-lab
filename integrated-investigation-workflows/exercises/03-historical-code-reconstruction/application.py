@@ -1,7 +1,4 @@
-def calculate_shipping_cost(weight, distance):
-    base_cost = weight * 2
-    distance_cost = distance * 0.5
-    return base_cost + distance_cost
+from shipping_utils import calculate_shipping_cost
 
 
 def calculate_order_total(price, quantity):
