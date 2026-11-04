@@ -19,3 +19,7 @@ def get_application_status():
 
 def get_build_identifier():
     return "forensic-recovery-001"
+
+
+def get_release_channel():
+    return "stable"
