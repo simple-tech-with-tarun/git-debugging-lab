@@ -16,6 +16,8 @@ This repository contains deliberately constructed Git histories and practical ex
 - Inspect Git trees, blobs, and commits.
 - Understand dangling objects and repository forensics.
 - Preserve and verify recovered source files.
+- Investigate HEAD movements using the reflog.
+- Recover commits no longer referenced by the current branch.
 
 ## Repository Exercises
 
@@ -90,28 +92,48 @@ The evidence directory includes:
 - Original recovered README
 - Unresolved merge-conflict snapshot
 
+### Reflog-Based Commit Recovery
+
+Investigate and recover a commit that was removed from the current branch history after a hard reset.
+
+This exercise demonstrates how the reflog records previous HEAD positions and helps locate commits that are no longer referenced by a branch.
+
+Topics:
+- `git reflog`
+- HEAD movement investigation
+- Identifying commits removed from branch history
+- Inspecting recovered commit metadata and content
+- Restoring a commit using `git reset --hard`
+- Verifying recovered source code
+
+**Evidence location:** `evidence/reflog-recovery/`
+
+See the [Reflog Recovery documentation](evidence/reflog-recovery/README.md) for the investigation steps, commit ID, and verification results.
+
 ## Repository Structure
 
 ```text
 git-debugging-lab/
-├── README.md
-├── app.py
-├── application.py
-├── config.py
-├── deployment.py
-├── metadata.py
-├── pricing_utils.py
-├── code-attribution-investigation/
-│   └── README.md
-└── evidence/
-    └── dangling-tree-recovery/
-        ├── README.md
-        ├── conflict-snapshot.zip
-        └── conflict-snapshot/
-            ├── README.md
-            ├── app.py
-            ├── config.py
-            └── metadata.py
+|-- README.md
+|-- app.py
+|-- application.py
+|-- config.py
+|-- deployment.py
+|-- metadata.py
+|-- pricing_utils.py
+|-- code-attribution-investigation/
+|   `-- README.md
+`-- evidence/
+    |-- dangling-tree-recovery/
+    |   |-- README.md
+    |   |-- conflict-snapshot.zip
+    |   `-- conflict-snapshot/
+    |       |-- README.md
+    |       |-- app.py
+    |       |-- config.py
+    |       `-- metadata.py
+    `-- reflog-recovery/
+        `-- README.md
 ```
 
 Additional investigation scenarios are maintained in dedicated Git branches.
