@@ -18,6 +18,8 @@ This repository contains deliberately constructed Git histories and practical ex
 - Preserve and verify recovered source files.
 - Investigate HEAD movements using the reflog.
 - Recover commits no longer referenced by the current branch.
+- Identify equivalent patches across independently created commits.
+- Investigate duplicate changes using `git patch-id` and `git cherry`.
 
 ## Repository Exercises
 
@@ -110,6 +112,23 @@ Topics:
 
 See the [Reflog Recovery documentation](evidence/reflog-recovery/README.md) for the investigation steps, commit ID, and verification results.
 
+### Patch ID Investigation
+
+Investigate independently created commits that introduce equivalent code changes.
+
+This exercise demonstrates how Git identifies equivalent patches even when commit hashes and commit metadata differ.
+
+Topics:
+- Patch ID calculation using `git patch-id`
+- Stable patch ID calculation using `--stable`
+- Comparing patches across independent commits
+- Identifying equivalent changes using `git cherry`
+- Understanding patch equivalence and its limitations
+
+**Evidence location:** `evidence/patch-id-investigation/`
+
+See the [Patch ID Investigation documentation](evidence/patch-id-investigation/README.md) for the investigation steps, commit IDs, matching patch IDs, and verification results.
+
 ## Repository Structure
 
 ```text
@@ -133,7 +152,9 @@ git-debugging-lab/
     |       |-- config.py
     |       `-- metadata.py
     `-- reflog-recovery/
-        `-- README.md
+    |   `-- README.md
+    |-- patch-id-investigation/
+    |   `-- README.md
 ```
 
 Additional investigation scenarios are maintained in dedicated Git branches.
@@ -149,6 +170,8 @@ Additional investigation scenarios are maintained in dedicated Git branches.
 | `git cat-file -p <object>` | Inspect Git objects |
 | `git ls-tree -r <tree>` | Inspect tree contents |
 | `git hash-object <file>` | Calculate a Git blob object ID |
+| `git patch-id --stable` | Calculate a stable patch ID |
+| `git cherry <upstream> <head>` | Identify equivalent patches across branches |
 
 ## Related Learning Repositories
 
