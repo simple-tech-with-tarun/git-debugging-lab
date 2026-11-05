@@ -11,12 +11,9 @@ def test_order_total():
 
     expected = 205.50
 
-    assert actual == expected, (
-        f"Expected {expected}, got {actual}"
-    )
+    assert actual == expected, f"Expected {expected}, got {actual}"
 
 
 if __name__ == "__main__":
     test_order_total()
     print("PASS: checkout tests are correct")
-
