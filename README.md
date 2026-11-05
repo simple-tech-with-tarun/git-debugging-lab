@@ -67,6 +67,26 @@ Topics:
 
 [View exercise documentation](code-attribution-investigation/README.md)
 
+### 5. Integrated Git Debugging and Investigation Workflows
+
+Apply Git history investigation, regression detection, code attribution, and repository forensics together to investigate realistic software defects and reconstruct repository history.
+
+Topics:
+- Production regression investigation using `git log`, `git blame`, and `git bisect`
+- Merge-introduced defect investigation and merge-parent analysis
+- Historical code reconstruction across file moves and renames
+- Repository investigation using reflogs, unreachable objects, trees, and blobs
+- Evidence-based root cause analysis and investigation reporting
+
+Practical exercises:
+- Production Regression Investigation
+- Merge-Introduced Defect
+- Historical Code Reconstruction
+- Advanced Repository Investigation
+- End-to-End Investigation Report
+
+[View integrated investigation exercises](integrated-investigation-workflows/README.md)
+
 ## Evidence and Recovery Exercises
 
 ### Dangling Tree Recovery
@@ -143,6 +163,14 @@ git-debugging-lab/
 |-- pricing_utils.py
 |-- code-attribution-investigation/
 |   `-- README.md
+|-- integrated-investigation-workflows/
+|   |-- README.md
+|   `-- exercises/
+|       |-- 01-production-regression/
+|       |-- 02-merge-introduced-defect/
+|       |-- 03-historical-code-reconstruction/
+|       |-- 04-advanced-repository-investigation/
+|       `-- 05-end-to-end-investigation-report/
 `-- evidence/
     |-- dangling-tree-recovery/
     |   |-- README.md
@@ -152,10 +180,10 @@ git-debugging-lab/
     |       |-- app.py
     |       |-- config.py
     |       `-- metadata.py
-    `-- reflog-recovery/
+    |-- reflog-recovery/
     |   `-- README.md
-    |-- patch-id-investigation/
-    |   `-- README.md
+    `-- patch-id-investigation/
+        `-- README.md
 ```
 
 Additional investigation scenarios are maintained in dedicated Git branches.
