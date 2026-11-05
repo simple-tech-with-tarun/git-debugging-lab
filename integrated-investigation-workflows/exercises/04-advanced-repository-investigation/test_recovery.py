@@ -12,12 +12,24 @@ SPEC.loader.exec_module(application)
 
 
 def test_deployment_status():
-    result = application.get_deployment_status()
-    expected = "ready"
+    assert application.get_deployment_status() == "ready"
 
-    assert result == expected, f"Expected {expected!r}, got {result!r}"
+
+def test_deployment_region():
+    assert application.get_deployment_region() == "ap-south-1"
+
+
+def test_deployment_metadata():
+    expected = {
+        "status": "ready",
+        "region": "ap-south-1",
+    }
+
+    assert application.get_deployment_metadata() == expected
 
 
 if __name__ == "__main__":
     test_deployment_status()
-    print("PASS: repository investigation baseline tests are correct")
+    test_deployment_region()
+    test_deployment_metadata()
+    print("PASS: deployment recovery tests are correct")
