@@ -8,5 +8,6 @@ def calculate_tax(amount, tax_rate):
 def calculate_order_total(price, quantity, weight, distance, tax_rate=0):
     subtotal = price * quantity
     shipping = estimate_shipping(weight, distance)
-    tax = calculate_tax(subtotal, tax_rate)
-    return round(subtotal + shipping + tax, 2)
+    taxable_total = subtotal + shipping
+    tax = calculate_tax(taxable_total, tax_rate)
+    return round(taxable_total + tax, 2)
